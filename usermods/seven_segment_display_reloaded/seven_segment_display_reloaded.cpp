@@ -350,6 +350,7 @@ private:
     _publishMQTTstr_P(_str_years, umSSDRYears);
     _publishMQTTstr_P(_str_displayMask, umSSDRDisplayMask);
 
+    _publishMQTTint_P(_str_maxLength, umSSDRLength);
     _publishMQTTint_P(_str_minBrightness, umSSDRBrightnessMin);
     _publishMQTTint_P(_str_maxBrightness, umSSDRBrightnessMax);
   }
@@ -373,6 +374,7 @@ private:
     ssdrObj[FPSTR(_str_days)] = umSSDRDays;
     ssdrObj[FPSTR(_str_months)] = umSSDRMonths;
     ssdrObj[FPSTR(_str_years)] = umSSDRYears;
+    ssdrObj[FPSTR(_str_maxLength)] = umSSDRLength;
     ssdrObj[FPSTR(_str_minBrightness)] = umSSDRBrightnessMin;
     ssdrObj[FPSTR(_str_maxBrightness)] = umSSDRBrightnessMax;
   }
@@ -386,7 +388,7 @@ public:
      */
   void setup() {
     //umSSDRLength = strip.getLengthTotal();
-    umSSDRLength = 70;
+    //umSSDRLength = 70;
     if (umSSDRMask != 0) {
       umSSDRMask = (bool*) realloc(umSSDRMask, umSSDRLength * sizeof(bool));
     } else {
@@ -565,6 +567,7 @@ public:
     umSSDRDays             = top[FPSTR(_str_days)] | umSSDRDays;
     umSSDRMonths           = top[FPSTR(_str_months)] | umSSDRMonths;
     umSSDRYears            = top[FPSTR(_str_years)] | umSSDRYears;
+    umSSDRLength           = top[FPSTR(_str_maxLength)] | umSSDRLength;
     umSSDRBrightnessMin    = top[FPSTR(_str_minBrightness)] | umSSDRBrightnessMin;
     umSSDRBrightnessMax    = top[FPSTR(_str_maxBrightness)] | umSSDRBrightnessMax;
 
