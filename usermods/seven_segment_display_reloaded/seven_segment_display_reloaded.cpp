@@ -93,6 +93,7 @@ private:
   static const char _str_days[];
   static const char _str_months[];
   static const char _str_years[];
+  static const char _str_maxLength[];
   static const char _str_minBrightness[];
   static const char _str_maxBrightness[];
 
@@ -599,6 +600,7 @@ const char UsermodSSDR::_str_days[]        PROGMEM = "LED-Numbers-Day";
 const char UsermodSSDR::_str_months[]      PROGMEM = "LED-Numbers-Month";
 const char UsermodSSDR::_str_years[]       PROGMEM = "LED-Numbers-Year";
 const char UsermodSSDR::_str_ldrEnabled[]  PROGMEM = "enable-auto-brightness";
+const char UsermodSSDR::_str_maxLength[]   PROGMEM = "max length of the clock"
 const char UsermodSSDR::_str_minBrightness[]  PROGMEM = "auto-brightness-min";
 const char UsermodSSDR::_str_maxBrightness[]  PROGMEM = "auto-brightness-max";
 
