@@ -385,7 +385,8 @@ public:
      * You can use it to initialize variables, sensors or similar.
      */
   void setup() {
-    umSSDRLength = strip.getLengthTotal();
+    //umSSDRLength = strip.getLengthTotal();
+    umSSDRLength = 70;
     if (umSSDRMask != 0) {
       umSSDRMask = (bool*) realloc(umSSDRMask, umSSDRLength * sizeof(bool));
     } else {
