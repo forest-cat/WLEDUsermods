@@ -1,4 +1,5 @@
 #include "wled.h"
+#include "usermod_settings.h"
 #ifdef USERMOD_SN_PHOTORESISTOR
   #include "SN_Photoresistor.h"
 #endif
