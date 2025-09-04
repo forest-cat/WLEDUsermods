@@ -577,6 +577,16 @@ public:
 
     return true;
   }
+  
+  void addEntry(UsermodSettings &s) {
+    // Add an integer input field for umSSDRLength
+    s.addEntry(FPSTR(_str_maxLength), umSSDRLength, 5);
+
+    // Add integer input fields for min and max brightness
+    s.addEntry(FPSTR(_str_minBrightness), umSSDRBrightnessMin, 5);
+    s.addEntry(FPSTR(_str_maxBrightness), umSSDRBrightnessMax, 5);
+  }
+
   /*
      * getId() allows you to optionally give your V2 usermod an unique ID (please define it in const.h!).
      * This could be used in the future for the system to determine whether your usermod is installed.
